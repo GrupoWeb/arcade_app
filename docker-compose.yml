@@ -1,0 +1,14 @@
+version: '3.2'
+
+services: 
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'secret'
+    networks: 
+        arcade_app:
+
+networks:
+  arcade_app:
+      external: 
+          name: arcade_app
